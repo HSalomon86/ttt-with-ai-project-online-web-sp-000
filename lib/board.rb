@@ -102,7 +102,7 @@ class Board
   def update(input, player)
     cells[input.to_i-1] = player.token
   end
-=======
+
     index = input.to_i
     index-= 1
     @cells[index]
@@ -132,5 +132,4 @@ class Board
     @cells[input.to_i - 1] = player.token
   end
 
->>>>>>> 8c33ac8a856baefc53deefefdf32a256a37de05d
 end
