@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # class Board
 #   attr_accessor :cells
 #
@@ -79,7 +79,7 @@ class Board
   end
 
   def position(input)
-<<<<<<< HEAD
+
     cells[input.to_i-1]
   end
 
