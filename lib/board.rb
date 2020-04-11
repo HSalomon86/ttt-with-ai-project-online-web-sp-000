@@ -49,13 +49,11 @@
 #   end
 #
 # end
-=======
->>>>>>> 8c33ac8a856baefc53deefefdf32a256a37de05d
+
 class Board
   attr_accessor :cells
 
   def initialize
-<<<<<<< HEAD
     reset!
   end
 
