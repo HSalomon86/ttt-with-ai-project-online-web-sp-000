@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # class Board
 #   attr_accessor :cells
 #
@@ -48,15 +49,25 @@
 #   end
 #
 # end
+=======
+>>>>>>> 8c33ac8a856baefc53deefefdf32a256a37de05d
 class Board
   attr_accessor :cells
 
   def initialize
+<<<<<<< HEAD
     reset!
   end
 
   def reset!
     @cells = Array.new(9, " ")
+=======
+    @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  end
+
+  def reset!
+    @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+>>>>>>> 8c33ac8a856baefc53deefefdf32a256a37de05d
   end
 
   def display
@@ -68,6 +79,7 @@ class Board
   end
 
   def position(input)
+<<<<<<< HEAD
     cells[input.to_i-1]
   end
 
@@ -90,4 +102,35 @@ class Board
   def update(input, player)
     cells[input.to_i-1] = player.token
   end
+=======
+    index = input.to_i
+    index-= 1
+    @cells[index]
+  end
+
+  def full?
+    @cells.all? {|a| a == "X" || a == "O"}
+  end
+
+  def turn_count
+    @cells.count{|turn| turn == "X" || turn == "O"}
+  end
+
+  def taken?(input)
+    !(position(input).nil? || position(input) == " ")
+  end
+
+  def valid_move?(input)
+    if taken?(input) == true
+      false
+    elsif taken?(input) == false && input.to_i == 1..9
+      true
+    end
+  end
+
+  def update(input, player)
+    @cells[input.to_i - 1] = player.token
+  end
+
+>>>>>>> 8c33ac8a856baefc53deefefdf32a256a37de05d
 end
