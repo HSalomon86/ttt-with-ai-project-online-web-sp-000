@@ -99,10 +99,7 @@ class Board
     cells[input.to_i-1] = player.token
   end
 
-    index = input.to_i
-    index-= 1
-    @cells[index]
-  end
+
 
   def full?
     @cells.all? {|a| a == "X" || a == "O"}
@@ -127,5 +124,4 @@ class Board
   def update(input, player)
     @cells[input.to_i - 1] = player.token
   end
-
 end
