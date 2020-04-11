@@ -59,13 +59,11 @@ class Board
 
   def reset!
     @cells = Array.new(9, " ")
-=======
     @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   end
 
   def reset!
     @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
->>>>>>> 8c33ac8a856baefc53deefefdf32a256a37de05d
   end
 
   def display
